@@ -5,8 +5,23 @@
 // event.which 
 // needs to be mobile friendly 
 
-const displaykey = document.getElementById('.key h2');
-const displayKeyCode = document.getElementById('keycode h2');
-const keycodeDiv = document.getElementById (.'keycode');
+
+const key = document.getElementById ("pressed key");
+const keycode = document.getElementById ("key");
+let eventKey = document.getElementById("eventKey");
+let eventLocation = document.getElementById ("eventLocation");
+let eventWhich = document.getElementById ("eventWhich");
+let eventCode = document.getElementById ("eventCode");
+
+
+
+document.addEventListener('keydown',(e) =>{
+    // key.textContent = e.key;
+    // keycode.textContent = e.key;
+    eventKey.textContent =e.key;
+    eventLocation.textContent =e.location;
+    eventWhich.textContent =e.which;
+    eventCode.textContent =e.code;
+})
 
 
